@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Meme_Me" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqo-pm-Wcc" userLabel="ImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pI4-nA-uGn" userLabel="BottomBar">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="veu-e7-BYb">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="q68-x5-DQh">
+                                            <connections>
+                                                <action selector="pickAnImageFromAlbum:" destination="BYZ-38-t0r" id="bWG-KI-8gS"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" id="9ci-Sv-6lP">
+                                            <connections>
+                                                <action selector="pickAnImageFromCamera:" destination="BYZ-38-t0r" id="lJ6-xP-Vgs"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Viq-JH-enE" userLabel="TopBar">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="csI-4x-VaW" userLabel="TopBarNav">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" id="1At-2H-dgG">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="9Bw-wF-MJg"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="R9v-1R-0ts" userLabel="TopText">
+                                <rect key="frame" x="296" y="119" width="8" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ABz-No-gYJ" userLabel="BottomText">
+                                <rect key="frame" x="296" y="420" width="8" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="pI4-nA-uGn" secondAttribute="bottom" id="4IQ-5d-LfA"/>
+                            <constraint firstItem="uqo-pm-Wcc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4KF-qd-soF"/>
+                            <constraint firstItem="pI4-nA-uGn" firstAttribute="top" secondItem="ABz-No-gYJ" secondAttribute="bottom" constant="75" id="5db-QK-lhL"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uqo-pm-Wcc" secondAttribute="bottom" id="ANc-yR-yiU"/>
+                            <constraint firstItem="R9v-1R-0ts" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CFD-dZ-cNq"/>
+                            <constraint firstItem="uqo-pm-Wcc" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="VeL-5Z-b2p"/>
+                            <constraint firstItem="R9v-1R-0ts" firstAttribute="top" secondItem="Viq-JH-enE" secondAttribute="bottom" constant="75" id="XM5-xs-kdZ"/>
+                            <constraint firstItem="Viq-JH-enE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Y1l-DN-Vue"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Viq-JH-enE" secondAttribute="trailing" constant="-20" id="a2U-Nq-OgI"/>
+                            <constraint firstItem="pI4-nA-uGn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="iH1-LW-srB"/>
+                            <constraint firstItem="Viq-JH-enE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="rNs-NR-TV7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pI4-nA-uGn" secondAttribute="trailing" constant="-20" id="t87-Yb-KgD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uqo-pm-Wcc" secondAttribute="trailing" constant="-20" id="tt1-kO-dBM"/>
+                            <constraint firstItem="ABz-No-gYJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uBB-Wf-gms"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="bottomBar" destination="pI4-nA-uGn" id="gOU-7q-yME"/>
+                        <outlet property="bottomBarNav" destination="veu-e7-BYb" id="9uk-32-E4V"/>
+                        <outlet property="bottomText" destination="ABz-No-gYJ" id="rxi-dK-83c"/>
+                        <outlet property="imageView" destination="uqo-pm-Wcc" id="Maf-bk-DGU"/>
+                        <outlet property="topBar" destination="Viq-JH-enE" id="PwP-4J-6HQ"/>
+                        <outlet property="topBarNav" destination="csI-4x-VaW" id="wbR-Np-vIU"/>
+                        <outlet property="topText" destination="R9v-1R-0ts" id="Zbu-xS-lgn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="229" y="214"/>
+        </scene>
+    </scenes>
+</document>
